@@ -1,3 +1,2 @@
-# Will-Lantz-Portfolio.github.io
-
+# WillLantz.github.io
 This is the portfolio for Will Lantz
