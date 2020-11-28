@@ -1,0 +1,31 @@
+{% extends 'portfoliodatabase/base.html' %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hobbies</title>
+
+</head>
+<body>
+{% block body %}
+    {% for item in hobbies_list %}  <!looping through the hobbies_list and storing it in 'item'>
+        <hr>
+        <div class="row mt-4">
+            <div class="col-md-3 offset-md-2">
+                <img class="img" src="{{ item.hobby_image }}">
+            </div>
+            <div class="col-md-4">
+                <h3>{{ item.hobby_name }}</h3>
+            </div>
+            <div class="col-md-2">
+                <a href="{% url 'portfoliodatabase:hobbydetail' item.id %}" class="btn btn-danger button" >Details</a>
+            </div>
+        </div>
+    {% endfor %}    <!closing the for loop>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% extends 'portfoliodatabase/base.html' %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+</head>
+<body>
+{% block body %}
+    {% for item in port_list %}
+        <hr>
+        <div class="row">
+            <div class="col-md-3 offset-md-2">
+                <img class="img" src="{{ item.port_image }}">
+            </div>
+            <div class="col-md-4">
+                <h3>{{ item.port_name }}</h3>
+                <h5> {{ item.port_desc }}</h5>
+            </div>
+            <div class="col-md-3">
+                <a href="{{ item.port_website }}" class="btn btn-danger button">GitHub</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+</body>
+</html>

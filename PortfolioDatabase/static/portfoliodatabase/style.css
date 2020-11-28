@@ -1,0 +1,55 @@
+
+.wrap{
+    width: 1200px !important;
+    margin: auto !important;
+}
+
+.dropCap{
+    float: left;
+    font-size: 300%;
+    color: aqua;
+    margin: -13px 7px -13px 0;
+}
+
+body {
+
+    background-image: radial-gradient(circle,
+    #da8cb8, #bf85b6, #a47fb1, #8978a8, #70719c, #596a90, #446282, #325973, #1c4f62, #09444f, #00393d, #002e2b);
+}
+
+.retro {
+    position: relative;
+    background-image: linear-gradient(to bottom, #ffd8ee, #f6d2f1, #e9cdf5, #d9c9fa, #c4c6fd, #afcbff, #99d0ff, #83d4ff, #72e0ff, #63ebff, #5ef5fe, #65fff5);
+    background-blend-mode: multiply;
+    background-repeat: repeat;
+    line-height: 1;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.center{
+    padding: 70px 0 !important;
+    text-align: center!important;
+}
+
+.img{
+  height: 180px;
+  overflow: hidden;
+}
+
+.img:hover{
+    height: 190px;
+    filter: drop-shadow(0 0 0.75rem black);
+    overflow: hidden;
+
+}
+
+.button:hover{
+    filter: drop-shadow(0 0 0.75rem crimson);
+    overflow: hidden;
+}
+
+.color1{
+    color: #5ef5fe !important;
+}
+

@@ -1,0 +1,32 @@
+{% extends 'portfoliodatabase/base.html' %}
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Page</title>
+
+</head>
+<body>
+{% block body %}
+    <div class = wrap>
+        <div class="row mt-4">
+            <div class="col-md-8 offset-md-2">
+                <h2>
+                    My name is Will Lantz and I am a Senior of Computer Science at Weber State.
+                    I have been attending Weber State since 2016 and I currently work at Williams International in Ogden Ut.
+                    I have a passion for learning and excel at communicating within a team environment.
+                </h2>
+            </div>
+        </div>
+        <div class=" col-md-4 offset-md-5 mt-5">
+            <a href="{% static "portfoliodatabase/Will Lantz Resume.pdf" %}" class="btn btn-danger button">Download my resume</a>
+        </div>
+    </div>
+{% endblock %}
+</body>
+</html>

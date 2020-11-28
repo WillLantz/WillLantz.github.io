@@ -1,0 +1,29 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'portfoliodatabase/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="navbar fixed navbar-dark bg-dark">
+    <button class ="btn btn-outline-danger button"><a href="{% url 'portfoliodatabase:home' %}" class="navbar-brand">Home Page</a></button>
+    <button class ="btn btn-outline-danger button"><a href="{% url 'portfoliodatabase:hobbies' %}" class="navbar-brand">Hobbies</a></button>
+    <button class ="btn btn-outline-danger button"><a href="{% url 'portfoliodatabase:portfolio' %}" class="navbar-brand">Portfolio</a></button>
+    <button class ="btn btn-outline-danger button"><a href="{% url 'portfoliodatabase:contact' %}" class="navbar-brand">Contact</a></button>
+</nav>
+{% if messages  %}
+    {% for message in messages %} <! looping through the messages, if they exist>
+        <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+{% block body %}
+
+{% endblock %}
+</body>
+</html>

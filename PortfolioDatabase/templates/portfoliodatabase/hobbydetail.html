@@ -1,0 +1,15 @@
+{% extends 'portfoliodatabase/base.html' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <img class="card img" src="{{ item.hobby_image }}">
+            </div>
+            <div class="col-md-6">
+                <h1> {{ item.hobby_name }}</h1>
+                <h2> {{ item.hobby_desc }}</h2>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'portfoliodatabase/base.html' %}
+
+{% block body %}
+    <form method="POST" id="ContactForm" class="center" >
+        {% csrf_token %}
+        {{ form }}
+        <H1>Lets pretend that there is a contact form here.</H1>
+        <button class ="btn btn-outline-danger button" type="submit">Submit</button>
+    </form>
+{% endblock %}
